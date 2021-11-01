@@ -30,7 +30,6 @@ export default function Dictionart() {
           placeholder="Type the word you are looking for..."
           onChange={handleKeyword}
         />
-        <input type="submit" />
       </form>
       <Results results={results} />
     </div>
