@@ -7,6 +7,11 @@ body {
   max-width: 960px;
   margin: 0 auto;
   margin-top: 80px;
+  margin-bottom: 120px;
+}
+
+.dictionary {
+  margin-bottom: 60px;
 }
 .heading {
   font-size: 40px;
@@ -14,7 +19,7 @@ body {
 }
 
 section {
-  background-color: rgba(255, 255, 255, 0.801);
+  background-color: rgba(255, 255, 255, 0.884);
   text-align: left;
   padding: 30px;
   border-radius: 9px;
@@ -28,14 +33,18 @@ section {
 .wordheading {
   margin-top: 0;
 }
+.partOfSpeech {
+  text-transform: capitalize;
+  font-size: 24px;
+  color: rgb(44, 51, 53);
+}
 
 .form {
   margin: 40px 0 40px 0;
-  background-color: rgba(255, 255, 255, 0.801);
-
+  background-color: rgba(255, 255, 255, 0.884);
   width: 960px;
   text-align: center;
-  color: rgb(44, 51, 53);
+  color: rgb(133, 138, 139);
   font-size: 17px;
   border: none;
   border-radius: 7px;
@@ -69,4 +78,25 @@ section {
 }
 .synonyms {
   display: inline;
+}
+
+.footer {
+  background-color: rgb(44, 51, 53);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  color: white;
+}
+.footerText {
+  margin-top: 10px;
+  color: rgb(255, 255, 255);
+}
+.linkbuttons {
+  max-width: 30px;
+  margin: 15px 10px;
+  padding: 5px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 7px;
 }
