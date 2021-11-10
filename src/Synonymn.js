@@ -1,15 +1,18 @@
 import React from "react";
 
 export default function Synonymn(props) {
-  console.log(props);
-  if (props.synonymn) {
+  if (props.synonymn && props.synonymn.length > 0) {
     return (
-      <div classname="synonyms">
+      <div className="synonyms">
         <em>Synonyms : </em>
 
         {props.synonymn.map(function (synonymn, index) {
           if (index < 6) {
-            return <span key={index}>{synonymn} , </span>;
+            return (
+              <span className="synonymnwrap" key={index}>
+                {synonymn}
+              </span>
+            );
           } else {
             return null;
           }

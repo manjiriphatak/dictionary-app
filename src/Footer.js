@@ -4,10 +4,17 @@ export default function Footer() {
   return (
     <footer className="footer">
       <div className="footerText">
-        {" "}
-        Open Source Code on{" "}
-        <a href="https://github.com/manjiriphatak/dictionary-app"> GITHUB </a>-
-        Coded by Manjiri Phatak
+        Open Source Code on
+        <span>
+          <a
+            href="https://github.com/manjiriphatak/dictionary-app"
+            className="gitlink"
+          >
+            {" "}
+            GITHUB{" "}
+          </a>
+        </span>
+        - Coded by Manjiri Phatak
       </div>
       <div className="footericons">
         <a

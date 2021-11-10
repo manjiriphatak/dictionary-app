@@ -10,10 +10,10 @@ export default function Results(props) {
             {props.results.word}{" "}
             <Phonetics phonetics={props.results.phonetics} />
           </h1>
-          <p>
-            <strong>Origin : </strong>
+          <span>
+            <strong> Origin :</strong>
             <em> {props.results.origin}</em>
-          </p>
+          </span>
         </section>
         {props.results.meanings.map(function (meaning, index) {
           return (
