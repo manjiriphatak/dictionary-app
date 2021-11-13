@@ -3,7 +3,7 @@ import React from "react";
 export default function Photos(props) {
   if (props.photos) {
     return (
-      <section>
+      <section className="photoSection">
         {props.photos.map(function (photo, index) {
           return (
             <span key={index}>

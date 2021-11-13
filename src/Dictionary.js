@@ -3,17 +3,17 @@ import axios from "axios";
 import Results from "./Results";
 import Photos from "./Photos";
 
-export default function Dictionart() {
-  const [keyword, setKeyword] = useState("");
+export default function Dictionary(props) {
+  const [keyword, setKeyword] = useState(props.defaultKeyword);
   const [results, setResults] = useState("");
   const [photos, setPhotos] = useState(null);
+  const [loaded, setLoaded] = useState(false);
 
   function handleKeyword(event) {
     setKeyword(event.target.value);
   }
 
-  function handleSearch(event) {
-    event.preventDefault();
+  function handleSearch() {
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`;
     axios.get(apiUrl).then(showDictionary);
 
@@ -28,27 +28,38 @@ export default function Dictionart() {
       })
       .then(showPhotos);
   }
+  function handleSubmit(event) {
+    event.preventDefault();
+    handleSearch();
+  }
   function showDictionary(response) {
     setResults(response.data[0]);
+  }
+  function load() {
+    setLoaded(true);
+    handleSearch();
   }
 
   function showPhotos(response) {
     setPhotos(response.data.photos);
   }
-
-  return (
-    <div>
-      <form onSubmit={handleSearch}>
-        <input
-          className="form"
-          type="search"
-          autoFocus="on"
-          placeholder="Type the word you are looking for..."
-          onChange={handleKeyword}
-        />
-      </form>
-      <Results results={results} />
-      <Photos photos={photos} />
-    </div>
-  );
+  if (loaded) {
+    return (
+      <div>
+        <form onSubmit={handleSubmit}>
+          <input
+            className="form"
+            type="search"
+            autoFocus="on"
+            placeholder="Type the word you are looking for..."
+            onChange={handleKeyword}
+          />
+        </form>
+        <Results results={results} />
+        <Photos photos={photos} />
+      </div>
+    );
+  } else {
+    load();
+  }
 }
