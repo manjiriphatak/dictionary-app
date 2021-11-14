@@ -10,7 +10,7 @@ export default function Synonymn(props) {
           if (index < 6) {
             return (
               <span className="synonymnwrap" key={index}>
-                {synonymn}
+                ● {synonymn}
               </span>
             );
           } else {
