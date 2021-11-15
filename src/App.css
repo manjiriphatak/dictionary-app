@@ -141,7 +141,7 @@ section {
 
 @media (max-width: 1024px) {
   .photos {
-    max-width: 190px;
+    max-width: 30%;
   }
   .photoSection {
     text-align: center;
@@ -154,7 +154,11 @@ section {
 
 @media (max-width: 768px) {
   .photos {
-    max-width: 150px;
+    max-width: 29%;
+  }
+  .photoSection {
+    padding: 5px;
+    padding-top: 12px;
   }
   body {
     background-size: 300%;
@@ -188,12 +192,16 @@ section {
     left: 20px;
   }
   .photos {
-    max-width: 100px;
+    max-width: 27%;
+    margin-top: 17px;
+  }
+  .photoSection {
+    padding: 0;
   }
 }
 @media (max-width: 480px) {
   .photos {
-    max-width: 110px;
+    max-width: 30%;
     margin: 6px 4px 1px 4px;
   }
   .photoSection {
@@ -231,11 +239,14 @@ section {
     padding: 2px;
   }
   .photos {
-    max-width: 80px;
+    max-width: 30%;
     margin: 6px 4px 1px 4px;
   }
 }
 @media (max-width: 280px) {
+  .photos {
+    max-width: 90%;
+  }
   .form {
     font-size: 12px;
   }
